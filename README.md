@@ -15,4 +15,4 @@ I use `zsh` shell with [`Powerlevel10k`](https://github.com/romkatv/powerlevel10
 
 I use Visual Studio Code, and my `settings.json` for vscode is saved in [`vscode`](./vscode) folder. I then use symlink to make my vscode getting the configuration directly from the repo.
 
-`ln -s <path_to_dotfiles_repo>/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings/json`
+`ln -s <path_to_dotfiles_repo>/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json`
