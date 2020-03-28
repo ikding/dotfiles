@@ -38,4 +38,8 @@
     "terminal.integrated.fontFamily": "MesloLGS NF",
     "autoDocstring.docstringFormat": "sphinx",
     "autoDocstring.includeExtendedSummary": true,
+    "python.formatting.provider": "black",
+    "cSpell.enableFiletypes": [
+        "!python"
+    ],
 }
