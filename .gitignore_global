@@ -1,3 +1,6 @@
+# Personal settings
+data_private/
+
 # General
 .DS_Store
 .AppleDouble
