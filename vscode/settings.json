@@ -42,4 +42,11 @@
     "cSpell.enableFiletypes": [
         "!python"
     ],
+    "python.linting.pycodestyleEnabled": true,
+    "python.linting.pylintArgs": [
+        "--enable= W0614"
+    ],
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
 }
