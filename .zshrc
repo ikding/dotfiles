@@ -12,6 +12,18 @@ export LSCOLORS=GxFxCxDxBxegedabagaced
 
 source ~/Documents/data_science/projects/powerlevel10k/powerlevel10k.zsh-theme
 
+# Setting zsh history
+setopt INC_APPEND_HISTORY
+setopt EXTENDED_HISTORY
+export HISTFILE=~/.zsh_history
+export HISTSIZE=100000
+export HISTFILESIZE=100000
+# export HISTTIMEFORMAT="%Y-%m-%d %T "
+# export HISTTIMEFORMAT="%y/%m/%d T "
+# export HIST_STAMPS="yyyy-mm-dd"
+# HIST_STAMPS="%d/%m/%y %T"
+SAVEHIST=$HISTSIZE
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
