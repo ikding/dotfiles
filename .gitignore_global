@@ -1,5 +1,5 @@
 # Personal settings
-data_private/
+data_private
 
 # General
 .DS_Store
