@@ -1,6 +1,6 @@
 [user]
 	name = I-Kang Ding
-	email = ikding@gmail.com
+	email = ikang.ding@koboldmetals.com
 [filter "media"]
 	required = true
 	clean = git media clean %f
@@ -8,11 +8,29 @@
 [core]
 	excludesfile = /Users/ikding/.gitignore_global
 	editor = code --wait
+	checkStat = minimal
+	trustctime = false
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
-[commit]
-	template = /Users/ikding/.stCommitMsg
+[pull]
+	rebase = false
+[push]
+	autoSetupRemote = true
+[filter "lfs"]
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+[diff "lfs"]
+	textconv = cat
+[alias]
+	gone = !git fetch --prune && git branch -v | grep \"\\[gone\\]\" | awk '{print $1}' | xargs git branch -D
+[safe]
+	directory = /home/kobold/kobold-core
+	directory = /home/kobold/machine-prospector
+	directory = /home/kobold/terrashed-ingest
+	directory = /home/kobold/kobold-scratch-lfs

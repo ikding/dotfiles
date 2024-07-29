@@ -5,30 +5,58 @@
     "editor.insertSpaces": true,
     "editor.renderWhitespace": "boundary",
     "editor.rulers": [
-        80, 100, 120,
+        80,
+        100,
+        120,
     ],
     "editor.tabSize": 4,
     "editor.wordWrap": "on",
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
-    "python.linting.enabled": true,
-    "python.linting.lintOnSave": true,
-    "python.linting.pylintEnabled": true,
-    "workbench.statusBar.feedback.visible": false,
-    "workbench.colorTheme": "Monokai",
+    // "python.linting.enabled": true,
+    // "python.linting.lintOnSave": true,
+    // "python.linting.pylintEnabled": false,
+    // "python.linting.mypyEnabled": true,
     "cSpell.language": "en",
-    "window.zoomLevel": 0,
-    "editor.minimap.enabled": false,
+    "cSpell.diagnosticLevel": "Hint",
+    "workbench.colorCustomizations": {
+        // will change the color of three dots to red
+        // "editorHint.foreground": "#ff0000",
+        // will underline the entire word with dots in your chosen color
+        "editorHint.border": "#00ff66",
+        "editorHint.foreground": "#f000",
+    },
     "terminal.integrated.scrollback": 100000,
     "editor.formatOnType": true,
-    "python.dataScience.sendSelectionToInteractiveWindow": false,
+    // "editor.formatOnSave": true,
     "cSpell.userWords": [
-        "anonymize"
+        "anonymize",
+        "dask",
+        "dataframe",
+        "dataframes",
+        "dgsa",
+        "discretize",
+        "drillhole",
+        "groupby",
+        "hdfs",
+        "issubset",
+        "itertools",
+        "kriging",
+        "ndarray",
+        "numpy",
+        "parallelization",
+        "tdem",
+        "terrashed",
+        "tqdm",
+        "xarray"
     ],
     "explorer.confirmDragAndDrop": false,
     "terminal.integrated.inheritEnv": false,
     "restructuredtext.linter.extraArgs": [
-        "--ignore D001"
+        "--config=setup.cfg",
+        // "--config",
+        // "${workspaceFolder}/doc8.ini",
+        // "--ignore D001"
     ],
     "workbench.iconTheme": "vscode-icons",
     "gitlens.defaultDateFormat": "YYYY-MM-DD HH:mm:ss ZZ",
@@ -36,17 +64,171 @@
     "gitlens.codeLens.enabled": false,
     "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
     "terminal.integrated.fontFamily": "MesloLGS NF",
-    "autoDocstring.docstringFormat": "sphinx",
-    "autoDocstring.includeExtendedSummary": true,
-    "python.formatting.provider": "black",
-    "cSpell.enableFiletypes": [
-        "!python"
-    ],
-    "python.linting.pycodestyleEnabled": true,
-    "python.linting.pylintArgs": [
-        "--enable= W0614"
-    ],
+    "autoDocstring.docstringFormat": "sphinx-notypes",
+    "cSpell.enableFiletypes": [],
+    // "python.linting.pylintArgs": [
+    //     "--enable=W0614",
+    //     "--enable=W0611",
+    //     "--disable=C0114"
+    // ],
     "[python]": {
-        "editor.defaultFormatter": "ms-python.python"
+        "editor.defaultFormatter": "ms-python.python",
+        "editor.codeActionsOnSave": {
+            "source.sortImports": true,
+            "editor.formatOnSave": false,
+        },
+        "editor.formatOnType": false
     },
+    "cSpell.enabled": true,
+    "autoDocstring.startOnNewLine": true,
+    // "python.linting.pylintPath": "/opt/anaconda3/envs/mp_env/bin/pylint",
+    "sqltools.format": {
+        "reservedWordCase": "upper",
+        "linesBetweenQueries": 3,
+        "indentSize": 2,
+    },
+    "yaml.schemas": {
+        "file:///Users/ikding/.vscode/extensions/atlassian.atlascode-3.0.6/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "atlascode.jira.enabled": true,
+    "atlascode.bitbucket.enabled": false,
+    "atlascode.jira.jqlList": [
+        {
+            "id": "7467ef03-4bf4-4588-8711-32fc6b94e650",
+            "enabled": true,
+            "name": "My koboldmetals Issues",
+            "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+            "siteId": "7446c548-20dc-4fcb-8b3e-4b1f8e94e459",
+            "monitor": true
+        }
+    ],
+    "git.autofetch": true,
+    "atlascode.jira.startWorkBranchTemplate.customPrefixes": [],
+    "atlascode.jira.startWorkBranchTemplate.customTemplate": "ikang/{{{issueKey}}}",
+    "editor.minimap.enabled": false,
+    "mypy-type-checker.args": [
+        "--config-file=setup.cfg",
+        "--follow-imports=silent",
+        "--show-column-numbers"
+    ],
+    "mypy-type-checker.importStrategy": "fromEnvironment",
+    // "python.linting.flake8Enabled": true,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "workbench.startupEditor": "welcomePage",
+    "vsicons.dontShowNewVersionMessage": true,
+    "python.languageServer": "Pylance",
+    "security.workspace.trust.untrustedFiles": "open",
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": true,
+    "flake8.args": [
+        "--config=setup.cfg"
+    ],
+    "flake8.importStrategy": "fromEnvironment",
+    "rewrap.wrappingColumn": 120,
+    "vscode-pets.theme": "forest",
+    "vscode-pets.petSize": "large",
+    "peacock.favoriteColors": [
+        {
+            "name": "Angular Red",
+            "value": "#dd0531"
+        },
+        {
+            "name": "Azure Blue",
+            "value": "#007fff"
+        },
+        {
+            "name": "JavaScript Yellow",
+            "value": "#f9e64f"
+        },
+        {
+            "name": "Mandalorian Blue",
+            "value": "#1857a4"
+        },
+        {
+            "name": "Node Green",
+            "value": "#215732"
+        },
+        {
+            "name": "React Blue",
+            "value": "#61dafb"
+        },
+        {
+            "name": "Something Different",
+            "value": "#832561"
+        },
+        {
+            "name": "Svelte Orange",
+            "value": "#ff3d00"
+        },
+        {
+            "name": "Vue Green",
+            "value": "#42b883"
+        }
+    ],
+    "restructuredtext.linter.doc8.extraArgs": [
+        "--config=setup.cfg",
+        // "--max-line-length 120",
+        // "--ignore D001",
+    ],
+    "dev.containers.defaultExtensions": [
+        "ms-python.python",  // move this to the top and see if that helps?
+        "eamodio.gitlens",
+        "johnpapa.vscode-peacock",
+        "ms-python.black-formatter",
+        "ms-python.flake8",
+        "ms-python.isort",
+        "ms-python.mypy-type-checker",
+        // "ms-python.python",  // this is now moved to the top
+        // "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter",
+        "ms-vscode.sublime-keybindings",
+        "njpwerner.autodocstring",
+        "stkb.rewrap",
+        "streetsidesoftware.code-spell-checker",
+        "vscode-icons-team.vscode-icons",
+    ],
+    "search.useParentIgnoreFiles": true,
+    "workbench.colorTheme": "Monokai",
+    "notebook.lineNumbers": "on",
+    "black-formatter.args": [
+        "--config",
+        "pyproject.toml",
+        "--preview",
+    ],
+    "black-formatter.importStrategy": "fromEnvironment",
+    "githubPullRequests.pullBranch": "never",
+    "python.analysis.typeCheckingMode": "off",
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.pytestParameters": true,
+    "jupyter.interactiveWindow.textEditor.executeSelection": false,
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    // "workbench.colorTheme": "Monokai", // <<< YOUR COLOR THEME GOES HERE <<<
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    // this includes Python docstrings
+                    "string.quoted.docstring",
+                ],
+                "settings": {
+                    // >>> YOU SET YOUR COLOR YOU WANT FOR PYTHON DOCSTRINGS
+                    // HERE <<<
+                    // Ex: to color docstrings like strings in Monokai
+                    "foreground": "#E6DB74",
+                    // Ex: to color docstrings like comments in Monokai
+                    // "foreground": "#88846F",
+                }
+            }
+        ]
+    },
+    "jupyter.askForKernelRestart": false,
+    "circleci.hostUrl": "",
+    "circleci.notifications.areActive": "no",
 }
